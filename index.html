@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nawabi Coder | Royal Web Craftsmanship & AI Automation for Hyderabad Businesses</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Nawabi Coder crafts high-performance websites, bespoke AI chatbots, and automated growth systems for restaurants, real estate, healthcare, retail, and professional services in Hyderabad.">
+  <meta name="keywords" content="Nawabi Coder, web development, AI automation, WhatsApp chatbot, business growth, Hyderabad, Telangana, digital agency">
+  
+  <!-- OpenGraph Tags -->
+  <meta property="og:title" content="Nawabi Coder | Royal Web Craftsmanship & AI Automation for Hyderabad Businesses">
+  <meta property="og:description" content="We build intelligent websites, AI automation, and growth systems for Hyderabad businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              primary: '#1a1a2e',
+              accent: '#e94560',
+              dark: '#0f0f23',
+              gray: '#f8f9fa',
+            }
+          },
+          borderRadius: {
+            card: '12px',
+            btn: '8px',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS file link -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-brand-primary font-sans antialiased selection:bg-brand-accent selection:text-white">
+
+  <!-- ---------------- SECTION 1: NAVIGATION ---------------- -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-1.5 focus:outline-none">
+        <span id="logo-text" class="text-2xl font-black tracking-tight text-white transition-colors duration-300">NAWABI</span>
+        <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-7">
+        <a href="#services" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 nav-link">Services</a>
+        <a href="#industries" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 nav-link">Industries</a>
+        <a href="#projects" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 nav-link">Projects</a>
+        <a href="#process" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 nav-link">Process</a>
+        <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 nav-link">About us</a>
+        <a href="#pricing" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 nav-link">Pricing</a>
+        <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-white transition-colors duration-300 nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <div class="hidden md:block">
+        <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-brand-accent hover:bg-brand-accent/90 transition-all duration-300 rounded-[8px] shadow-md hover:shadow-brand-accent/20 active:scale-95">
+          Strategy Call
+        </a>
+      </div>
+
+      <!-- Hamburger Menu button -->
+      <button id="menu-btn" class="md:hidden p-2 rounded-md focus:outline-none" aria-label="Toggle Menu">
+        <i data-lucide="menu" id="menu-icon" class="h-6 w-6 text-white transition-colors duration-300"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-dark/95 backdrop-blur-lg flex flex-col justify-between p-6 hidden">
+    <div>
+      <div class="flex items-center justify-between pb-8 border-b border-slate-800">
+        <a href="#" class="flex items-center gap-1.5" id="mobile-menu-logo">
+          <span class="text-2xl font-black tracking-tight text-white">NAWABI</span>
+          <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+        </a>
+        <button id="close-menu-btn" class="p-2 text-slate-400 hover:text-white focus:outline-none" aria-label="Close Menu">
+          <i data-lucide="x" class="h-6 w-6"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-5 mt-8">
+        <a href="#services" class="text-lg font-medium text-slate-300 hover:text-white mobile-link">Services</a>
+        <a href="#industries" class="text-lg font-medium text-slate-300 hover:text-white mobile-link">Industries</a>
+        <a href="#projects" class="text-lg font-medium text-slate-300 hover:text-white mobile-link">Projects</a>
+        <a href="#process" class="text-lg font-medium text-slate-300 hover:text-white mobile-link">Process</a>
+        <a href="#about" class="text-lg font-medium text-slate-300 hover:text-white mobile-link">About us</a>
+        <a href="#pricing" class="text-lg font-medium text-slate-300 hover:text-white mobile-link">Pricing</a>
+        <a href="#contact" class="text-lg font-medium text-slate-300 hover:text-white mobile-link">Contact</a>
+      </nav>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <a href="#contact" class="w-full text-center py-4 bg-brand-accent text-white font-semibold rounded-[8px] mobile-link">
+        Book a 15-Minute Strategy Call
+      </a>
+    </div>
+  </div>
+
+
+  <!-- ---------------- SECTION 2: HERO ---------------- -->
+  <section class="relative min-h-[90vh] flex items-center bg-brand-dark text-white pt-28 pb-16 overflow-hidden">
+    <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-primary via-brand-dark to-black opacity-80"></div>
+    <div class="absolute inset-0 z-0 opacity-15" style="background-image: radial-gradient(circle_at_center, rgba(233, 69, 96, 0.15) 1.5px, transparent 1.5px); background-size: 24px 24px;"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column (60%) -->
+      <div class="lg:col-span-7 flex flex-col items-start text-left reveal-fade-up">
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-white mb-6">
+          Hyderabad's Royal Partner for <span class="text-brand-accent">Web & AI Growth</span>
+        </h1>
+
+        <p class="text-lg text-slate-300 leading-relaxed mb-8 max-w-xl">
+          We craft high-performance websites, bespoke AI chatbots, and automated growth systems that turn your business's missed opportunities into confirmed revenue.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <a href="#contact" class="inline-flex items-center justify-center gap-2 px-8 py-4 font-bold text-white bg-brand-accent hover:bg-brand-accent/90 transition-all duration-300 rounded-[8px] shadow-lg shadow-brand-accent/20 active:scale-95 text-center">
+            Book a 15-Minute Strategy Call
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </a>
+          
+          <a href="#projects" class="inline-flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white bg-slate-800 hover:bg-slate-700 transition-all duration-300 rounded-[8px] border border-slate-700 active:scale-95 text-center">
+            Explore Projects
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column (40%) -->
+      <div class="lg:col-span-5 relative w-full aspect-square max-w-[450px] mx-auto lg:max-w-none reveal-fade-up delay-200">
+        <div class="w-full h-full bg-slate-900/60 border border-slate-800 rounded-[12px] p-6 shadow-2xl backdrop-blur-md relative flex flex-col justify-between overflow-hidden">
+          
+          <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+            <div class="flex items-center gap-2">
+              <div class="h-3 w-3 bg-red-500 rounded-full"></div>
+              <div class="h-3 w-3 bg-yellow-500 rounded-full"></div>
+              <div class="h-3 w-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="text-[10px] text-slate-500 font-mono tracking-widest uppercase">NAWABI.CODER MONITOR</div>
+          </div>
+
+          <!-- SVG Chart Animation -->
+          <div class="my-auto py-4 relative flex flex-col items-center justify-center gap-4">
+            <svg class="w-full h-32 text-slate-800" viewBox="0 0 200 100">
+              <line x1="0" y1="90" x2="200" y2="90" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 3" />
+              <line x1="0" y1="50" x2="200" y2="50" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 3" />
+              <line x1="0" y1="10" x2="200" y2="10" stroke="currentColor" strokeWidth="0.5" strokeDasharray="3 3" />
+              
+              <!-- Static Path but stylized -->
+              <path d="M 10 75 Q 40 60 70 80 T 130 30 T 190 15" fill="none" stroke="#e94560" strokeWidth="3" class="chart-line" />
+              <circle cx="10" cy="75" r="4" fill="#e94560" />
+              <circle cx="70" cy="80" r="4" fill="#e94560" />
+              <circle cx="130" cy="30" r="4" fill="#e94560" />
+              <circle cx="190" cy="15" r="5" fill="#e94560" />
+            </svg>
+          </div>
+
+          <!-- Floating Badges inside Illustration -->
+          <!-- Card 1 -->
+          <div class="absolute top-12 left-2 bg-slate-900 border border-slate-700/60 p-2.5 rounded-lg shadow-lg flex items-center gap-2 max-w-[150px] float-anim-1">
+            <div class="bg-emerald-500/20 p-1.5 rounded text-emerald-400">
+              <i data-lucide="user" class="h-4 w-4"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[10px] text-slate-400 font-medium">New Lead</span>
+              <span class="text-xs font-bold text-white">+1 Confirmed</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="absolute top-24 right-4 bg-slate-900 border border-slate-700/60 p-2.5 rounded-lg shadow-lg flex items-center gap-2 max-w-[140px] float-anim-2">
+            <div class="bg-blue-500/20 p-1.5 rounded text-blue-400">
+              <i data-lucide="bot" class="h-4 w-4"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[10px] text-slate-400 font-medium">AI Agent</span>
+              <span class="text-xs font-bold text-white">Reply Sent ✅</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="absolute bottom-16 right-6 bg-brand-accent p-2.5 rounded-lg shadow-xl shadow-brand-accent/20 flex items-center gap-2 float-anim-3">
+            <i data-lucide="trending-up" class="h-4 w-4 text-white"></i>
+            <span class="text-xs font-bold text-white">Revenue ↑ 35%</span>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="absolute bottom-10 left-6 bg-slate-900 border border-slate-700/60 p-2.5 rounded-lg shadow-lg flex items-center gap-2 float-anim-4">
+            <div class="bg-purple-500/20 p-1.5 rounded text-purple-400 animate-pulse">
+              <i data-lucide="clock" class="h-4 w-4"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-[9px] text-slate-400">WhatsApp System</span>
+              <span class="text-[11px] font-bold text-white">Booking Confirmed</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between text-slate-500 text-[10px] pt-4 border-t border-slate-800">
+            <span class="flex items-center gap-1.5">
+              <span class="h-2 w-2 bg-emerald-500 rounded-full inline-block animate-ping"></span>
+              AI Sync Active
+            </span>
+            <span>Hyderabad Central</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 3: THE PROBLEM ---------------- -->
+  <section class="py-24 bg-white text-brand-primary" id="problem">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary mb-4">
+          Every Missed Call is Lost Revenue
+        </h2>
+        <div class="w-16 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-reveal">
+        <!-- Card 1 -->
+        <div class="bg-brand-gray border border-slate-100 rounded-[12px] p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between reveal-item">
+          <div>
+            <div class="h-12 w-12 bg-red-100 rounded-lg flex items-center justify-center text-brand-accent mb-6">
+              <i data-lucide="phone-off" class="h-6 w-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-primary mb-3">
+              You're Sleeping, They're Buying
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Customers message at 11 PM. You reply at 9 AM. They're already at your competitor — whether it's a table, a property, or an appointment.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-brand-gray border border-slate-100 rounded-[12px] p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between reveal-item">
+          <div>
+            <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6">
+              <i data-lucide="clock" class="h-6 w-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-primary mb-3">
+              Staff Wasted on Repetitive Work
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              60% of business inquiries are the same questions: Pricing? Timing? Availability? Your team answers manually, every single time.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-brand-gray border border-slate-100 rounded-[12px] p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between reveal-item">
+          <div>
+            <div class="h-12 w-12 bg-amber-100 rounded-lg flex items-center justify-center text-amber-600 mb-6">
+              <i data-lucide="trending-down" class="h-6 w-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-brand-primary mb-3">
+              No-Shows Kill Revenue
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-sm">
+              Empty slots, missed appointments, forgotten reservations — silent profit killers across every industry.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 4: INDUSTRIES WE SERVE ---------------- -->
+  <section class="py-24 bg-brand-gray" id="industries">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary mb-4">
+          Built for Every Business That Serves Customers
+        </h2>
+        <div class="w-16 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-reveal">
+        
+        <!-- Card 1: Restaurants -->
+        <div class="bg-white border border-slate-100 rounded-[12px] p-6 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] reveal-item">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-10 w-10 bg-brand-accent/10 text-brand-accent rounded-lg flex items-center justify-center">
+              <i data-lucide="utensils" class="h-5 w-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-primary">Restaurants & Cafés</h3>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            WhatsApp bookings, menu automation, review systems, table management.
+          </p>
+        </div>
+
+        <!-- Card 2: Real Estate -->
+        <div class="bg-white border border-slate-100 rounded-[12px] p-6 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] reveal-item">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-10 w-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+              <i data-lucide="building" class="h-5 w-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-primary">Real Estate</h3>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Property listings, lead capture, appointment scheduling, CRM dashboards.
+          </p>
+        </div>
+
+        <!-- Card 3: Healthcare -->
+        <div class="bg-white border border-slate-100 rounded-[12px] p-6 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] reveal-item">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-10 w-10 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center">
+              <i data-lucide="heart-pulse" class="h-5 w-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-primary">Healthcare & Clinics</h3>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Patient booking, reminder systems, feedback automation, availability sync.
+          </p>
+        </div>
+
+        <!-- Card 4: Retail -->
+        <div class="bg-white border border-slate-100 rounded-[12px] p-6 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] reveal-item">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-10 w-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center">
+              <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-primary">Retail & E-commerce</h3>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Online stores, order tracking, WhatsApp commerce, inventory alerts.
+          </p>
+        </div>
+
+        <!-- Card 5: Professional Services -->
+        <div class="bg-white border border-slate-100 rounded-[12px] p-6 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] reveal-item">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-10 w-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center">
+              <i data-lucide="briefcase" class="h-5 w-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-primary">Professional Services</h3>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Portfolio sites, consultation booking, proposal automation, client portals.
+          </p>
+        </div>
+
+        <!-- Card 6: Education -->
+        <div class="bg-white border border-slate-100 rounded-[12px] p-6 hover:shadow-lg transition-all duration-300 hover:scale-[1.02] reveal-item">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-10 w-10 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center">
+              <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-primary">Education & Coaching</h3>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Course sites, enrollment bots, class reminders, student CRM.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 5: SERVICES ---------------- -->
+  <section class="py-24 bg-white text-brand-primary" id="services">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-20">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary mb-4">
+          What We Build
+        </h2>
+        <div class="w-16 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 stagger-reveal">
+        
+        <!-- Service 1 -->
+        <div class="bg-white border border-slate-200 rounded-[12px] p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between reveal-item">
+          <div>
+            <div class="h-12 w-12 bg-brand-accent/10 text-brand-accent rounded-lg flex items-center justify-center mb-6">
+              <i data-lucide="globe" class="h-6 w-6"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-primary mb-4">Website Development</h3>
+            
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Business websites</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Portfolio sites</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>E-commerce stores</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Real estate listings</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Landing pages</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Restaurant sites</span>
+              </li>
+            </ul>
+
+            <p class="text-xs text-slate-500 border-t border-slate-100 pt-4 mb-4">
+              <strong>Tech:</strong> Built with Next.js, fast, mobile-first, SEO-ready
+            </p>
+          </div>
+
+          <div class="bg-emerald-50 text-emerald-800 p-4 rounded-lg text-sm font-semibold text-center">
+            Result: "Your business looks credible in 3 seconds"
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-white border border-slate-200 rounded-[12px] p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between reveal-item">
+          <div>
+            <div class="h-12 w-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-6">
+              <i data-lucide="bot" class="h-6 w-6"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-primary mb-4">AI Automation</h3>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>WhatsApp chatbots</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Lead generation systems</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Appointment booking</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Auto-replies</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Email automation</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>CRM integrations</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Customer support bots</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-blue-50 text-blue-800 p-4 rounded-lg text-sm font-semibold text-center">
+            Result: "Customers served while you focus on operations"
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-white border border-slate-200 rounded-[12px] p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between reveal-item">
+          <div>
+            <div class="h-12 w-12 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center mb-6">
+              <i data-lucide="trending-up" class="h-6 w-6"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-brand-primary mb-4">Growth Systems</h3>
+
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Google Business optimization</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Local SEO</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Review automation</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Analytics dashboards</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Conversion optimization</span>
+              </li>
+              <li class="flex items-center gap-2.5 text-slate-700 text-sm">
+                <i data-lucide="check" class="h-4 w-4 text-emerald-500"></i>
+                <span>Online branding</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 text-amber-800 p-4 rounded-lg text-sm font-semibold text-center">
+            Result: "Found on Google. Chosen by customers."
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 6: PROCESS ---------------- -->
+  <section class="py-24 bg-brand-dark text-white relative overflow-hidden" id="process">
+    <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-primary to-brand-dark opacity-50"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-20">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-4">
+          From First Call to Live System in 7 Days
+        </h2>
+        <div class="w-16 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <!-- Process Connect Timeline -->
+      <div class="relative">
+        <!-- Connecting Desktop line -->
+        <div class="hidden lg:block absolute top-[56px] left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-brand-accent/20 via-brand-accent to-brand-accent/20 z-0"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10 stagger-reveal">
+          
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center text-center group reveal-item">
+            <div class="h-28 w-28 rounded-full bg-brand-primary border border-brand-accent/30 shadow-xl shadow-brand-accent/5 flex items-center justify-center text-white mb-6 relative group-hover:border-brand-accent transition-all duration-300">
+              <span class="text-3xl font-black font-mono text-brand-accent">01</span>
+              <div class="absolute -top-1.5 -right-1.5 bg-brand-accent text-white text-[9px] px-2 py-0.5 rounded-full font-bold">15 Min</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Free Audit</h3>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-[240px]">
+              We analyze your current presence, competitors, and missed opportunities across your industry.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center text-center group reveal-item">
+            <div class="h-28 w-28 rounded-full bg-brand-primary border border-brand-accent/30 shadow-xl shadow-brand-accent/5 flex items-center justify-center text-white mb-6 relative group-hover:border-brand-accent transition-all duration-300">
+              <span class="text-3xl font-black font-mono text-brand-accent">02</span>
+              <div class="absolute -top-1.5 -right-1.5 bg-brand-accent text-white text-[9px] px-2 py-0.5 rounded-full font-bold">3-5 Days</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Strategy & Build</h3>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-[240px]">
+              We build your website + automation system tailored to your business type. You see progress daily.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center text-center group reveal-item">
+            <div class="h-28 w-28 rounded-full bg-brand-primary border border-brand-accent/30 shadow-xl shadow-brand-accent/5 flex items-center justify-center text-white mb-6 relative group-hover:border-brand-accent transition-all duration-300">
+              <span class="text-3xl font-black font-mono text-brand-accent">03</span>
+              <div class="absolute -top-1.5 -right-1.5 bg-brand-accent text-white text-[9px] px-2 py-0.5 rounded-full font-bold">1 Day</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Launch & Training</h3>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-[240px]">
+              Go live. We train your team in 30 minutes. No tech skills needed.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex flex-col items-center text-center group reveal-item">
+            <div class="h-28 w-28 rounded-full bg-brand-primary border border-brand-accent/30 shadow-xl shadow-brand-accent/5 flex items-center justify-center text-white mb-6 relative group-hover:border-brand-accent transition-all duration-300">
+              <span class="text-3xl font-black font-mono text-brand-accent">04</span>
+              <div class="absolute -top-1.5 -right-1.5 bg-emerald-500 text-white text-[9px] px-2 py-0.5 rounded-full font-bold">Ongoing</div>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Grow</h3>
+            <p class="text-slate-400 text-sm leading-relaxed max-w-[240px]">
+              Monthly optimization, new features, support. You're never alone.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 7: FEATURED PROJECTS ---------------- -->
+  <section class="py-24 bg-white text-brand-primary" id="projects">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 bg-brand-accent/10 text-brand-accent text-xs font-bold rounded-full uppercase tracking-wider mb-3">
+          Proven Deployments
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary mb-4">
+          Featured Projects Built & Deployed
+        </h2>
+        <p class="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base">
+          Real production systems engineered with precision, high performance, and custom business workflows.
+        </p>
+        <div class="w-16 h-1 bg-brand-accent mx-auto rounded-full mt-4"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 stagger-reveal">
+        
+        <!-- Project 1: PGL Corporate -->
+        <div class="bg-brand-gray border border-slate-200/80 rounded-[16px] p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between reveal-item relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-brand-accent/5 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+          
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-accent uppercase tracking-wider bg-brand-accent/10 px-3 py-1 rounded-full">
+                <i data-lucide="building-2" class="h-3.5 w-3.5"></i> Corporate & Enterprise
+              </span>
+              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Production Ready
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-black text-brand-primary mb-3 group-hover:text-brand-accent transition-colors">
+              PGL Corporate Platform
+            </h3>
+            
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              A robust, enterprise-grade multi-page web platform engineered for corporate presence. Includes structured service verticals, dedicated industry landing modules, client portfolio showcases, interactive contact infrastructure, and complete search engine optimization.
+            </p>
+
+            <!-- Key Features & Specs -->
+            <div class="space-y-2.5 mb-6 text-xs text-slate-700 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0"></i>
+                <span>Multi-Page Corporate Architecture (Services, Industries, FAQ, Team)</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0"></i>
+                <span>Enterprise SEO, Sitemap.xml & Structured Meta Infrastructure</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0"></i>
+                <span>High-Speed Static Generation & Mobile-First Responsive Design</span>
+              </div>
+            </div>
+
+            <!-- Tech Badges -->
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/80 mb-6">
+              <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-medium text-slate-600">HTML5 / Semantic CSS</span>
+              <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-medium text-slate-600">Corporate Branding</span>
+              <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-medium text-slate-600">Lead Generation</span>
+              <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-medium text-slate-600">SEO Architecture</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold block">Client Result</span>
+              <span class="text-xs font-bold text-brand-primary">Commanding authority & corporate credibility</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <a href="https://www.perfectgulf.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-white bg-slate-900 hover:bg-brand-accent transition-colors rounded-[6px] shadow-sm">
+                <span>Live Site</span> <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
+              </a>
+              <a href="#contact" class="inline-flex items-center gap-1 text-xs font-bold text-slate-600 hover:text-brand-accent transition-colors">
+                Request Similar <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Fairies Crochet Nest -->
+        <div class="bg-brand-gray border border-slate-200/80 rounded-[16px] p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col justify-between reveal-item relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-bl-full pointer-events-none transition-transform group-hover:scale-110"></div>
+          
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 uppercase tracking-wider bg-purple-100 px-3 py-1 rounded-full">
+                <i data-lucide="shopping-bag" class="h-3.5 w-3.5"></i> E-Commerce & Retail
+              </span>
+              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Live & Deployed
+              </span>
+            </div>
+
+            <h3 class="text-2xl font-black text-brand-primary mb-3 group-hover:text-purple-600 transition-colors">
+              Fairies Crochet Nest
+            </h3>
+            
+            <p class="text-slate-600 text-sm leading-relaxed mb-6">
+              A bespoke, mobile-optimized e-commerce storefront and handcrafted product catalog. Features dynamic item categorization, interactive shopping cart, admin controls, and seamless cloud order dispatch connected to Google Sheets backend.
+            </p>
+
+            <!-- Key Features & Specs -->
+            <div class="space-y-2.5 mb-6 text-xs text-slate-700 font-medium">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0"></i>
+                <span>Interactive Handcrafted Catalog & Custom Cart Experience</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0"></i>
+                <span>Automated Google Sheets Order Tracking & Admin Interface</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="h-4 w-4 text-emerald-500 shrink-0"></i>
+                <span>Cloud Deployment on Netlify with Instant Asset Delivery</span>
+              </div>
+            </div>
+
+            <!-- Tech Badges -->
+            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-200/80 mb-6">
+              <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-medium text-slate-600">Custom E-Commerce</span>
+              <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-medium text-slate-600">Google Sheets API</span>
+              <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-medium text-slate-600">Admin Dashboard</span>
+              <span class="px-2.5 py-1 bg-white border border-slate-200 rounded-md text-[11px] font-medium text-slate-600">Netlify Cloud</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-4 rounded-xl border border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <span class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold block">Client Result</span>
+              <span class="text-xs font-bold text-brand-primary">Frictionless buying with zero manual order hassle</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <a href="https://fairy-crochet-nest.netlify.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-white bg-purple-700 hover:bg-purple-800 transition-colors rounded-[6px] shadow-sm">
+                <span>Live Site</span> <i data-lucide="external-link" class="h-3.5 w-3.5"></i>
+              </a>
+              <a href="#contact" class="inline-flex items-center gap-1 text-xs font-bold text-slate-600 hover:text-purple-600 transition-colors">
+                Request Similar <i data-lucide="arrow-right" class="h-3.5 w-3.5"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 8: ABOUT US ---------------- -->
+  <section class="py-24 bg-brand-gray text-brand-primary" id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Image Column (5 cols) -->
+        <div class="lg:col-span-5 reveal-fade-up">
+          <div class="relative group">
+            <!-- Decorative Glow Background -->
+            <div class="absolute -inset-2 bg-gradient-to-r from-brand-accent to-brand-primary rounded-[16px] opacity-10 group-hover:opacity-20 transition-all duration-500 blur-xl"></div>
+            
+            <!-- Main Photo Container -->
+            <div class="relative overflow-hidden rounded-[16px] border border-slate-200/80 bg-white p-3 shadow-2xl">
+              <img src="ceo.jpg" alt="M.A. MOID SUFIYAN" class="w-full h-auto rounded-[12px] object-cover filter saturate-100 hover:scale-[1.02] transition-transform duration-500">
+              
+              <!-- Glass Badge Overlay -->
+              <div class="absolute bottom-6 left-6 right-6 bg-brand-dark/95 backdrop-blur-md border border-slate-800 p-4 rounded-lg shadow-xl text-white">
+                <div class="text-xs font-semibold text-brand-accent uppercase tracking-widest mb-0.5">Founder & Lead Engineer</div>
+                <div class="text-lg font-bold">M.A. MOID SUFIYAN</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Column (7 cols) -->
+        <div class="lg:col-span-7 flex flex-col items-start reveal-fade-up delay-200">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-accent/10 text-brand-accent text-xs font-bold rounded-full uppercase tracking-wider mb-4">
+            The Solo Advantage
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary mb-6 leading-tight">
+            One Founder. Zero Agency Bloat. Direct Execution.
+          </h2>
+          
+          <div class="w-12 h-1 bg-brand-accent rounded-full mb-6"></div>
+          
+          <div class="space-y-4 text-slate-600 leading-relaxed text-sm mb-8">
+            <p>
+              I am <strong>M.A. MOID SUFIYAN</strong>, and I don't run a bloated agency. When you hire <strong>Nawabi Coder</strong>, you don't deal with sales reps, account managers, or junior interns. You deal directly with me—the engineer designing your website, structuring your databases, and building your automation workflows.
+            </p>
+            <p>
+              By combining high-performance web development with custom conversational AI, I help Hyderabad business owners reclaim their time and increase daily revenue. My lean operational structure ensures zero translation loss, ultra-fast updates, and enterprise-grade tech without the agency markup.
+            </p>
+          </div>
+
+          <!-- The Solo Advantage Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 w-full">
+            <div class="flex gap-3">
+              <div class="h-6 w-6 rounded bg-brand-accent/10 text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="user-check" class="h-4.5 w-4.5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-brand-primary mb-1">Direct Communication</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">No middlemen. You have a direct line to the person actually building your systems.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="h-6 w-6 rounded bg-brand-accent/10 text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="zap" class="h-4.5 w-4.5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-brand-primary mb-1">Hyper-Fast Turnarounds</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">Zero bureaucracy or endless meetings. Changes and updates are deployed in hours.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="h-6 w-6 rounded bg-brand-accent/10 text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="shield-check" class="h-4.5 w-4.5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-brand-primary mb-1">Full Ownership</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">I take 100% personal accountability for every line of code and automation logic.</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <div class="h-6 w-6 rounded bg-brand-accent/10 text-brand-accent flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="git-branch" class="h-4.5 w-4.5"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-sm text-brand-primary mb-1">Tailored Tech Architecture</h4>
+                <p class="text-xs text-slate-500 leading-relaxed">No generic templates. I build custom integrations designed around your unique workflow.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Quote Block -->
+          <div class="border-l-4 border-brand-accent pl-4 py-1.5 mb-8 bg-white/50 rounded-r-lg pr-4 w-full">
+            <p class="text-slate-700 italic text-sm leading-relaxed">
+              "You shouldn't have to pay for an agency's overhead, fancy offices, or account managers. You should pay for clean code and automated systems that make your business more profitable."
+            </p>
+            <p class="text-xs font-bold text-brand-primary mt-2 uppercase tracking-wider">
+              — M.A. MOID SUFIYAN, Founder of Nawabi Coder
+            </p>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-brand-accent hover:bg-brand-accent/90 transition-all rounded-[8px] shadow-md hover:shadow-brand-accent/20 active:scale-95">
+              Work Directly With Me
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 8: PRICING ---------------- -->
+  <section class="py-24 bg-white text-brand-primary" id="pricing">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-brand-primary mb-4">
+          Investment That Pays Back in 30 Days
+        </h2>
+        <div class="w-16 h-1 bg-brand-accent mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-10 stagger-reveal">
+        
+        <!-- Pricing 1 -->
+        <div class="bg-white border border-slate-200 rounded-[12px] p-8 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 reveal-item">
+          <div>
+            <h3 class="text-xl font-bold text-brand-primary">Starter</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-black text-brand-primary">₹4,999</span>
+              <span class="text-slate-500 text-sm">One-time</span>
+            </div>
+            <div class="w-full h-px bg-slate-100 my-6"></div>
+
+            <ul class="space-y-4 text-sm text-slate-600">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>4-5 page website</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Mobile optimized</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Contact form</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Google Business setup</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>1 revision round</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectPackage('Starter')" class="mt-8 block w-full text-center py-3 text-sm font-bold text-brand-primary bg-brand-gray border border-slate-200 hover:bg-slate-100 transition-colors rounded-[8px] cursor-pointer">
+            Start Here
+          </button>
+        </div>
+
+        <!-- Pricing 2 (Growth Highlighted) -->
+        <div class="bg-brand-dark border-2 border-brand-accent rounded-[12px] p-8 flex flex-col justify-between shadow-2xl relative text-white reveal-item">
+          <div class="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-brand-accent text-white px-4 py-1 text-xs font-bold rounded-full uppercase tracking-wider">
+            Most Popular
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold">Growth</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-black">₹8,999</span>
+              <span class="text-slate-400 text-sm">One-time</span>
+            </div>
+            <div class="w-full h-px bg-slate-800 my-6"></div>
+
+            <ul class="space-y-4 text-sm text-slate-300">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Everything in Starter</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>WhatsApp / lead integration</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>AI auto-replies (basic)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Industry-specific features (menu, listings, booking)</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>2 revision rounds</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>30-day support</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectPackage('Growth')" class="mt-8 block w-full text-center py-3.5 text-sm font-bold text-white bg-brand-accent hover:bg-brand-accent/90 transition-all rounded-[8px] shadow-lg shadow-brand-accent/20 cursor-pointer">
+            Get Growth
+          </button>
+        </div>
+
+        <!-- Pricing 3 -->
+        <div class="bg-white border border-slate-200 rounded-[12px] p-8 flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 reveal-item">
+          <div>
+            <h3 class="text-xl font-bold text-brand-primary">Pro</h3>
+            <div class="mt-4 flex items-baseline gap-1">
+              <span class="text-4xl font-black text-brand-primary">₹13,999</span>
+              <span class="text-slate-500 text-sm">+ ₹3,999/month</span>
+            </div>
+            <div class="w-full h-px bg-slate-100 my-6"></div>
+
+            <ul class="space-y-4 text-sm text-slate-600">
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Everything in Growth</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Full AI chatbot</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Lead capture system</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>CRM dashboard</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Monthly SEO & optimization</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Review automation</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Priority support</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <i data-lucide="check" class="h-4 w-4 text-brand-accent"></i>
+                <span>Quarterly strategy calls</span>
+              </li>
+            </ul>
+          </div>
+
+          <button onclick="selectPackage('Pro')" class="mt-8 block w-full text-center py-3 text-sm font-bold text-brand-primary bg-brand-gray border border-slate-200 hover:bg-slate-100 transition-colors rounded-[8px] cursor-pointer">
+            Go Pro
+          </button>
+        </div>
+
+      </div>
+
+      <p class="text-center text-xs text-slate-500">
+        * All prices inclusive of GST. No hidden fees. Custom enterprise plans available.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 10: CONTACT & FORM ---------------- -->
+  <section class="py-24 bg-brand-dark text-white relative overflow-hidden" id="contact">
+    <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-brand-primary/40 to-brand-dark opacity-40"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-black tracking-tight mb-4">
+          Ready to Scale Your Business?
+        </h2>
+        <p class="text-slate-400">
+          Book a 15-Minute Strategy Call. No pitch, no pressure. Just honest technical analysis on how to double your leads and automate your operations.
+        </p>
+        <div class="w-16 h-1 bg-brand-accent mx-auto rounded-full mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left side: Contact form (7 cols) -->
+        <div class="lg:col-span-7 bg-brand-primary/40 border border-slate-800 rounded-[12px] p-8 backdrop-blur-md">
+          <form id="contact-form" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Name field -->
+              <div>
+                <label for="name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <i data-lucide="user" class="h-3.5 w-3.5"></i> Full Name
+                </label>
+                <input type="text" name="name" id="name" required class="w-full bg-slate-900/60 border border-slate-800 focus:border-brand-accent rounded-[8px] px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors" placeholder="e.g. Rahul Kumar">
+                <p id="error-name" class="text-brand-accent text-xs mt-1.5 hidden"></p>
+              </div>
+
+              <!-- Business Name field -->
+              <div>
+                <label for="businessName" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <i data-lucide="building-2" class="h-3.5 w-3.5"></i> Business Name
+                </label>
+                <input type="text" name="businessName" id="businessName" required class="w-full bg-slate-900/60 border border-slate-800 focus:border-brand-accent rounded-[8px] px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors" placeholder="e.g. Spice Garden Cafe">
+                <p id="error-businessName" class="text-brand-accent text-xs mt-1.5 hidden"></p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Email field -->
+              <div>
+                <label for="email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <i data-lucide="mail" class="h-3.5 w-3.5"></i> Email Address
+                </label>
+                <input type="email" name="email" id="email" required class="w-full bg-slate-900/60 border border-slate-800 focus:border-brand-accent rounded-[8px] px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors" placeholder="e.g. rahul@gmail.com">
+                <p id="error-email" class="text-brand-accent text-xs mt-1.5 hidden"></p>
+              </div>
+
+              <!-- Phone (WhatsApp) field -->
+              <div>
+                <label for="phone" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <i data-lucide="phone" class="h-3.5 w-3.5"></i> WhatsApp Number
+                </label>
+                <input type="text" name="phone" id="phone" required class="w-full bg-slate-900/60 border border-slate-800 focus:border-brand-accent rounded-[8px] px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors" placeholder="e.g. +91 98480 22338">
+                <p id="error-phone" class="text-brand-accent text-xs mt-1.5 hidden"></p>
+              </div>
+            </div>
+
+            <!-- Industry selection -->
+            <div>
+              <label for="industry" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <i data-lucide="briefcase" class="h-3.5 w-3.5"></i> Industry
+              </label>
+              <select name="industry" id="industry" required class="w-full bg-slate-900 border border-slate-800 focus:border-brand-accent rounded-[8px] px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors">
+                <option value="" disabled selected>Select Industry...</option>
+                <option value="Restaurant">Restaurant / Cafe</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Healthcare">Healthcare / Clinic</option>
+                <option value="Retail">Retail / E-commerce</option>
+                <option value="Professional Services">Professional Services</option>
+                <option value="Education">Education & Coaching</option>
+                <option value="Other">Other</option>
+              </select>
+              <p id="error-industry" class="text-brand-accent text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Service Interest field -->
+            <div>
+              <label for="serviceInterest" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                <i data-lucide="file-text" class="h-3.5 w-3.5"></i> Service Interest
+              </label>
+              <select name="serviceInterest" id="serviceInterest" required class="w-full bg-slate-900 border border-slate-800 focus:border-brand-accent rounded-[8px] px-4 py-3 text-sm text-white focus:outline-none transition-colors">
+                <option value="" disabled selected>What service interest you?</option>
+                <option value="Website">Website Development</option>
+                <option value="Automation">AI Automation</option>
+                <option value="Growth">Growth Systems</option>
+                <option value="All">All of the above</option>
+              </select>
+              <p id="error-serviceInterest" class="text-brand-accent text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Message field -->
+            <div>
+              <label for="message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                Message
+              </label>
+              <textarea name="message" id="message" rows="4" required class="w-full bg-slate-900/60 border border-slate-800 focus:border-brand-accent rounded-[8px] px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none transition-colors resize-none" placeholder="Tell us briefly about your business and goals..."></textarea>
+              <p id="error-message" class="text-brand-accent text-xs mt-1.5 hidden"></p>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" id="submit-btn" class="w-full py-4 bg-brand-accent hover:bg-brand-accent/90 text-white font-bold rounded-[8px] transition-colors flex items-center justify-center gap-2 active:scale-[0.99] shadow-lg shadow-brand-accent/20">
+              <i data-lucide="send" class="h-4 w-4"></i> Book a 15-Minute Strategy Call
+            </button>
+
+            <!-- Success/Error messages -->
+            <div id="form-feedback" class="p-4 rounded-[8px] text-sm hidden"></div>
+
+          </form>
+        </div>
+
+        <!-- Right side: Direct Contact details (5 cols) -->
+        <div class="lg:col-span-5 space-y-8">
+          <div class="bg-brand-primary/30 border border-slate-800/80 rounded-[12px] p-6 space-y-6">
+            <div>
+              <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1.5">Email Inquiry</h4>
+              <a href="mailto:hello@nawabicoder.com" class="text-xl font-bold text-white hover:text-brand-accent transition-colors">
+                hello@nawabicoder.com
+              </a>
+            </div>
+
+            <div class="pt-6 border-t border-slate-800">
+              <h4 class="text-xs font-semibold text-slate-500 uppercase tracking-widest mb-1">Hours of Operations</h4>
+              <p class="text-sm font-semibold text-slate-300">Mon-Sat, 10 AM - 8 PM IST</p>
+              <p class="text-xs text-slate-500 mt-1">Closed on Sundays & National Holidays</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 text-slate-500 text-xs px-4">
+            <i data-lucide="shield-check" class="h-5 w-5 text-brand-accent shrink-0"></i>
+            <span>Verified Hyderabad digital solutions partner in Telangana.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ---------------- SECTION 11: FOOTER ---------------- -->
+  <footer class="bg-brand-primary text-white border-t border-slate-800 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-12 border-b border-slate-800">
+      
+      <!-- Column 1 -->
+      <div class="lg:col-span-4 flex flex-col items-start gap-4">
+        <a href="#" class="flex items-center gap-1.5">
+          <span class="text-2xl font-black tracking-tight text-white">NAWABI</span>
+          <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+        </a>
+        <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
+          Royal Web Craftsmanship. Intelligent Automation. Growth.<br>
+          Accelerating business revenues using cutting-edge website design and conversational automated solutions.
+        </p>
+        <div class="flex items-center gap-4 mt-2">
+          <a href="#" class="h-9 w-9 bg-slate-800 text-slate-300 rounded-full flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors" aria-label="LinkedIn">
+            <span class="text-sm font-bold">in</span>
+          </a>
+          <a href="#" class="h-9 w-9 bg-slate-800 text-slate-300 rounded-full flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors" aria-label="Instagram">
+            <span class="text-sm font-bold">ig</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="lg:col-span-2">
+        <h4 class="font-bold text-sm tracking-wider uppercase mb-6 text-brand-accent">Services</h4>
+        <ul class="space-y-3.5 text-sm text-slate-400">
+          <li><a href="#services" class="hover:text-white transition-colors">Web Development</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">AI Automation</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">Growth Systems</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">WhatsApp Chatbots</a></li>
+          <li><a href="#services" class="hover:text-white transition-colors">Local SEO Ranking</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="lg:col-span-3">
+        <h4 class="font-bold text-sm tracking-wider uppercase mb-6 text-brand-accent">Industries & Work</h4>
+        <ul class="space-y-3.5 text-sm text-slate-400">
+          <li><a href="#projects" class="hover:text-white transition-colors font-medium text-slate-300">Featured Projects</a></li>
+          <li><a href="#industries" class="hover:text-white transition-colors">Restaurants & Cafés</a></li>
+          <li><a href="#industries" class="hover:text-white transition-colors">Real Estate & Construction</a></li>
+          <li><a href="#industries" class="hover:text-white transition-colors">Healthcare Clinics</a></li>
+          <li><a href="#industries" class="hover:text-white transition-colors">Retail & WhatsApp Commerce</a></li>
+          <li><a href="#industries" class="hover:text-white transition-colors">Consultancies & Professionals</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="lg:col-span-3">
+        <h4 class="font-bold text-sm tracking-wider uppercase mb-6 text-brand-accent">Company</h4>
+        <ul class="space-y-3.5 text-sm text-slate-400">
+          <li><a href="#about" class="hover:text-white transition-colors">About Nawabi Coder</a></li>
+          <li><a href="#process" class="hover:text-white transition-colors">Our 7-Day Process</a></li>
+          <li><a href="#pricing" class="hover:text-white transition-colors">Pricing Packages</a></li>
+          <li><a href="#contact" class="hover:text-white transition-colors">15-Min Strategy Call</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+          <li class="pt-2 border-t border-slate-800 text-xs text-slate-500 font-mono">
+            GSTIN: 36XXXXX0000X0X
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom footer -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left">
+      <p>© 2026 Nawabi Coder. All rights reserved.</p>
+      <p>Built with Royal Craftsmanship in Hyderabad, serving businesses across India.</p>
+    </div>
+  </footer>
+
+  <!-- ---------------- SECTION: FLOATING ACTIONS (WHATSAPP & NAWAB AI) ---------------- -->
+  <div id="floating-actions-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3.5">
+    
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/918688112676?text=Hi%20Nawabi%20Coder%2C%20I%20would%20like%20to%20know%20more%20about%20your%20website%20%26%20AI%20services." target="_blank" rel="noopener noreferrer" class="group relative h-13 w-13 p-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300" aria-label="Chat directly on WhatsApp" title="Direct WhatsApp Chat with Moid">
+      <!-- Tooltip on hover -->
+      <span class="absolute right-full mr-3 px-3 py-1.5 bg-brand-dark/95 text-white text-[11px] font-semibold rounded-lg shadow-xl border border-slate-700 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        Chat on WhatsApp 💬
+      </span>
+      <!-- WhatsApp SVG Icon -->
+      <svg class="h-7 w-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.004 2c-5.518 0-9.998 4.476-9.998 9.995 0 1.763.459 3.486 1.332 5.002L2 22l5.127-1.343a9.96 9.96 0 004.877 1.258h.004c5.518 0 9.998-4.476 9.998-9.995 0-2.67-1.04-5.18-2.93-7.07A9.94 9.94 0 0012.004 2zm0 18.283h-.003a8.27 8.27 0 01-4.22-1.155l-.303-.18-3.136.822.837-3.056-.197-.314a8.276 8.276 0 01-1.267-4.395c0-4.57 3.719-8.289 8.29-8.289 2.215 0 4.297.863 5.863 2.43 1.566 1.567 2.428 3.65 2.427 5.864 0 4.57-3.719 8.289-8.29 8.289zm4.544-6.208c-.249-.125-1.472-.726-1.7-.809-.228-.083-.395-.125-.561.125-.166.249-.643.809-.788.975-.145.166-.291.187-.54.062a6.82 6.82 0 01-2.007-1.238 7.525 7.525 0 01-1.39-1.733c-.146-.25-.016-.385.109-.509.112-.112.249-.291.374-.436.125-.146.166-.25.249-.416.083-.166.042-.312-.02-.437-.063-.125-.562-1.352-.77-1.851-.202-.487-.408-.42-.561-.428-.145-.008-.312-.01-.478-.01-.166 0-.437.062-.665.312-.229.249-.873.853-.873 2.08s.894 2.413 1.019 2.58c.125.166 1.76 2.687 4.263 3.769.596.257 1.061.411 1.424.526.598.19 1.142.163 1.572.099.48-.072 1.472-.603 1.68-1.185.207-.582.207-1.081.145-1.185-.062-.104-.229-.166-.478-.291z"/>
+      </svg>
+    </a>
+
+    <!-- Speech bubble preview (shows initially, dismissible) -->
+    <div id="nawab-greeting-bubble" class="bg-brand-dark/95 text-white border border-slate-700/80 shadow-2xl p-3.5 rounded-2xl rounded-br-sm max-w-[280px] text-xs backdrop-blur-md flex items-start gap-2.5 transition-all duration-300">
+      <div class="h-6 w-6 rounded-full bg-brand-accent flex items-center justify-center shrink-0 text-white font-bold text-[10px]">
+        👑
+      </div>
+      <div>
+        <p class="text-slate-200 font-medium leading-relaxed">
+          Adaab! I am <strong class="text-brand-accent">Nawab</strong>. Ask me anything about our pricing, projects, or delivery! 👋
+        </p>
+        <button id="close-greeting-btn" class="text-[10px] text-slate-400 hover:text-white underline mt-1.5 focus:outline-none cursor-pointer">
+          Dismiss
+        </button>
+      </div>
+    </div>
+
+    <!-- Chatbot Window (Initially Hidden) -->
+    <div id="nawab-chat-window" class="w-[360px] sm:w-[390px] max-w-[calc(100vw-32px)] h-[540px] max-h-[calc(100vh-100px)] bg-brand-dark/95 border border-slate-700/90 rounded-[20px] shadow-2xl backdrop-blur-xl flex flex-col overflow-hidden hidden transition-all duration-300">
+      
+      <!-- Chat Header -->
+      <div class="bg-brand-primary p-4 border-b border-slate-800 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <div class="h-10 w-10 rounded-full bg-gradient-to-tr from-brand-accent to-pink-500 flex items-center justify-center text-white font-black shadow-md text-base">
+              👑
+            </div>
+            <span class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 border-2 border-brand-dark"></span>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <h3 class="font-extrabold text-white text-sm tracking-tight">Nawab</h3>
+              <span class="text-[10px] font-bold text-brand-accent bg-brand-accent/10 px-2 py-0.5 rounded-full uppercase">AI Assistant</span>
+            </div>
+            <p class="text-[11px] text-slate-400">Nawabi Coder • Instant Answers</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-1">
+          <!-- Voice toggle button -->
+          <button id="nawab-voice-btn" class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800/60 transition-colors cursor-pointer" title="Toggle Voice Responses">
+            <i data-lucide="volume-x" id="voice-icon" class="h-4 w-4"></i>
+          </button>
+          <!-- Minimize / Close Button -->
+          <button id="nawab-close-btn" class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800/60 transition-colors cursor-pointer" title="Close Chat">
+            <i data-lucide="x" class="h-4 w-4"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages Area -->
+      <div id="nawab-messages" class="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs">
+        <!-- Welcome Bot Message -->
+        <div class="flex items-start gap-2.5">
+          <div class="h-7 w-7 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs shrink-0 mt-0.5">
+            👑
+          </div>
+          <div class="bg-slate-800/80 border border-slate-700/60 text-slate-200 p-3.5 rounded-2xl rounded-tl-sm max-w-[85%] leading-relaxed shadow-sm">
+            <p class="mb-1.5 font-semibold text-white">Adaab & Welcome to Nawabi Coder! 👑</p>
+            <p class="text-slate-300 mb-2">I am <strong>Nawab</strong>, your royal AI guide. I can answer anything about our web development, pricing packages, live projects, or connect you directly with Moid on WhatsApp.</p>
+            <p class="text-[11px] text-slate-400 font-medium">Click a quick question below or type your message:</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Chips Container -->
+      <div id="nawab-quick-chips" class="px-4 py-2 bg-slate-900/60 border-t border-slate-800/80 flex gap-1.5 overflow-x-auto no-scrollbar shrink-0">
+        <button type="button" class="nawab-chip shrink-0 px-2.5 py-1 bg-slate-800 hover:bg-brand-accent text-slate-300 hover:text-white rounded-full text-[11px] transition-colors border border-slate-700/60 cursor-pointer" data-query="What are your pricing plans?">
+          💰 Pricing Plans
+        </button>
+        <button type="button" class="nawab-chip shrink-0 px-2.5 py-1 bg-slate-800 hover:bg-brand-accent text-slate-300 hover:text-white rounded-full text-[11px] transition-colors border border-slate-700/60 cursor-pointer" data-query="Show me your past projects">
+          🚀 Past Projects
+        </button>
+        <button type="button" class="nawab-chip shrink-0 px-2.5 py-1 bg-slate-800 hover:bg-brand-accent text-slate-300 hover:text-white rounded-full text-[11px] transition-colors border border-slate-700/60 cursor-pointer" data-query="What are your payment terms?">
+          💳 Payment Terms
+        </button>
+        <button type="button" class="nawab-chip shrink-0 px-2.5 py-1 bg-slate-800 hover:bg-brand-accent text-slate-300 hover:text-white rounded-full text-[11px] transition-colors border border-slate-700/60 cursor-pointer" data-query="How does domain and hosting work?">
+          🌐 Domain & Hosting
+        </button>
+        <button type="button" class="nawab-chip shrink-0 px-2.5 py-1 bg-slate-800 hover:bg-brand-accent text-slate-300 hover:text-white rounded-full text-[11px] transition-colors border border-slate-700/60 cursor-pointer" data-query="How long does it take to build?">
+          ⏱️ 7-Day Timeline
+        </button>
+        <button type="button" class="nawab-chip shrink-0 px-2.5 py-1 bg-slate-800 hover:bg-brand-accent text-slate-300 hover:text-white rounded-full text-[11px] transition-colors border border-slate-700/60 cursor-pointer" data-query="Can I chat on WhatsApp?">
+          💬 Chat on WhatsApp
+        </button>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="p-3 bg-brand-primary border-t border-slate-800 shrink-0">
+        <form id="nawab-form" class="flex items-center gap-2">
+          <input type="text" id="nawab-input" placeholder="Ask Nawab anything..." autocomplete="off" class="flex-1 bg-slate-900 border border-slate-700/80 focus:border-brand-accent rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none transition-colors">
+          <button type="submit" id="nawab-send-btn" class="h-9 w-9 bg-brand-accent hover:bg-brand-accent/90 text-white rounded-xl flex items-center justify-center transition-all shadow-md active:scale-95 shrink-0 cursor-pointer">
+            <i data-lucide="send" class="h-4 w-4"></i>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Floating Toggle Button (Always visible on bottom right) -->
+    <button id="nawab-toggle-btn" class="group relative h-14 w-14 rounded-full bg-gradient-to-tr from-brand-accent to-pink-600 text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none cursor-pointer" aria-label="Open Chatbot Nawab">
+      <div class="relative">
+        <span class="text-2xl group-hover:rotate-12 transition-transform duration-300 inline-block">👑</span>
+        <span class="absolute -top-1 -right-1 h-3.5 w-3.5 bg-emerald-500 rounded-full border-2 border-brand-dark animate-ping"></span>
+        <span class="absolute -top-1 -right-1 h-3.5 w-3.5 bg-emerald-500 rounded-full border-2 border-brand-dark"></span>
+      </div>
+    </button>
+
+  </div>
+
+  <!-- Link script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
