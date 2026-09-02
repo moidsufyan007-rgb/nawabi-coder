@@ -13,12 +13,15 @@
   <link rel="canonical" href="https://nawabicoder.com/">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.png">
   
   <!-- OpenGraph / Facebook Tags -->
   <meta property="og:site_name" content="Nawabi Coder">
   <meta property="og:title" content="Nawabi Coder | Royal Web Craftsmanship & AI Automation">
   <meta property="og:description" content="We build intelligent websites, AI automation, and growth systems for businesses in Hyderabad and pan-India.">
+  <meta property="og:image" content="https://nawabicoder.com/logo.png">
   <meta property="og:url" content="https://nawabicoder.com/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
@@ -27,6 +30,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nawabi Coder | Royal Web Craftsmanship & AI Automation">
   <meta name="twitter:description" content="Hyderabad's Royal Partner for Web & AI Growth. High-performance websites & bespoke chatbots.">
+  <meta name="twitter:image" content="https://nawabicoder.com/logo.png">
 
   <!-- JSON-LD Structured Data for Google Search -->
   <script type="application/ld+json">
@@ -36,8 +40,8 @@
     "name": "Nawabi Coder",
     "alternateName": ["NawabiCoder", "Nawabi Coder Agency"],
     "url": "https://nawabicoder.com/",
-    "logo": "https://nawabicoder.com/ceo.jpg",
-    "image": "https://nawabicoder.com/ceo.jpg",
+    "logo": "https://nawabicoder.com/logo.png",
+    "image": "https://nawabicoder.com/logo.png",
     "description": "Nawabi Coder crafts high-performance websites, bespoke AI chatbots, and automated growth systems for businesses in Hyderabad and India.",
     "founder": {
       "@type": "Person",
@@ -145,9 +149,12 @@
   <!-- ---------------- SECTION 1: NAVIGATION ---------------- -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-1.5 focus:outline-none">
-        <span id="logo-text" class="text-2xl font-black tracking-tight text-white transition-colors duration-300">NAWABI</span>
-        <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+      <a href="#" class="flex items-center gap-3 focus:outline-none group">
+        <img src="emblem-circle.png" alt="Nawabi Coder Logo" class="h-9 w-9 rounded-full object-contain shadow-md transition-transform duration-300 group-hover:scale-105 bg-white p-0.5 border border-slate-700/60">
+        <div class="flex items-center gap-1.5">
+          <span id="logo-text" class="text-2xl font-black tracking-tight text-white transition-colors duration-300">NAWABI</span>
+          <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+        </div>
       </a>
 
       <!-- Desktop Links -->
@@ -179,9 +186,12 @@
   <div id="mobile-menu" class="fixed inset-0 z-50 bg-brand-dark/95 backdrop-blur-lg flex flex-col justify-between p-6 hidden">
     <div>
       <div class="flex items-center justify-between pb-8 border-b border-slate-800">
-        <a href="#" class="flex items-center gap-1.5" id="mobile-menu-logo">
-          <span class="text-2xl font-black tracking-tight text-white">NAWABI</span>
-          <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+        <a href="#" class="flex items-center gap-2.5" id="mobile-menu-logo">
+          <img src="emblem-circle.png" alt="Nawabi Coder Logo" class="h-8 w-8 rounded-full object-contain shadow-md bg-white p-0.5 border border-slate-700/60">
+          <div class="flex items-center gap-1.5">
+            <span class="text-2xl font-black tracking-tight text-white">NAWABI</span>
+            <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+          </div>
         </a>
         <button id="close-menu-btn" class="p-2 text-slate-400 hover:text-white focus:outline-none" aria-label="Close Menu">
           <i data-lucide="x" class="h-6 w-6"></i>
@@ -1274,9 +1284,12 @@
       
       <!-- Column 1 -->
       <div class="lg:col-span-4 flex flex-col items-start gap-4">
-        <a href="#" class="flex items-center gap-1.5">
-          <span class="text-2xl font-black tracking-tight text-white">NAWABI</span>
-          <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+        <a href="#" class="flex items-center gap-3">
+          <img src="emblem-circle.png" alt="Nawabi Coder Logo" class="h-10 w-10 rounded-full object-contain shadow-md bg-white p-0.5 border border-slate-700/60">
+          <div class="flex items-center gap-1.5">
+            <span class="text-2xl font-black tracking-tight text-white">NAWABI</span>
+            <span class="text-2xl font-black tracking-tight text-brand-accent">CODER</span>
+          </div>
         </a>
         <p class="text-slate-400 text-sm leading-relaxed max-w-sm">
           Royal Web Craftsmanship. Intelligent Automation. Growth.<br>
@@ -1358,8 +1371,8 @@
 
     <!-- Speech bubble preview (shows initially, dismissible) -->
     <div id="nawab-greeting-bubble" class="bg-brand-dark/95 text-white border border-slate-700/80 shadow-2xl p-3.5 rounded-2xl rounded-br-sm max-w-[280px] text-xs backdrop-blur-md flex items-start gap-2.5 transition-all duration-300">
-      <div class="h-6 w-6 rounded-full bg-brand-accent flex items-center justify-center shrink-0 text-white font-bold text-[10px]">
-        👑
+      <div class="h-7 w-7 rounded-full bg-white flex items-center justify-center shrink-0 border border-slate-700 overflow-hidden shadow-sm">
+        <img src="emblem-circle.png" alt="Nawab" class="h-full w-full object-contain">
       </div>
       <div>
         <p class="text-slate-200 font-medium leading-relaxed">
@@ -1378,9 +1391,7 @@
       <div class="bg-brand-primary p-4 border-b border-slate-800 flex items-center justify-between shrink-0">
         <div class="flex items-center gap-3">
           <div class="relative">
-            <div class="h-10 w-10 rounded-full bg-gradient-to-tr from-brand-accent to-pink-500 flex items-center justify-center text-white font-black shadow-md text-base">
-              👑
-            </div>
+            <img src="emblem-circle.png" alt="Nawab AI" class="h-10 w-10 rounded-full object-contain shadow-md bg-white p-0.5 border border-slate-700/60">
             <span class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 border-2 border-brand-dark"></span>
           </div>
           <div>
@@ -1408,8 +1419,8 @@
       <div id="nawab-messages" class="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs">
         <!-- Welcome Bot Message -->
         <div class="flex items-start gap-2.5">
-          <div class="h-7 w-7 rounded-full bg-brand-accent flex items-center justify-center text-white text-xs shrink-0 mt-0.5">
-            👑
+          <div class="h-7 w-7 rounded-full bg-white flex items-center justify-center shrink-0 border border-slate-700 overflow-hidden shadow-sm mt-0.5">
+            <img src="emblem-circle.png" alt="Nawab" class="h-full w-full object-contain">
           </div>
           <div class="bg-slate-800/80 border border-slate-700/60 text-slate-200 p-3.5 rounded-2xl rounded-tl-sm max-w-[85%] leading-relaxed shadow-sm">
             <p class="mb-1.5 font-semibold text-white">Adaab & Welcome to Nawabi Coder! 👑</p>
@@ -1454,12 +1465,10 @@
     </div>
 
     <!-- Floating Toggle Button (Always visible on bottom right) -->
-    <button id="nawab-toggle-btn" class="group relative h-14 w-14 rounded-full bg-gradient-to-tr from-brand-accent to-pink-600 text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none cursor-pointer" aria-label="Open Chatbot Nawab">
-      <div class="relative">
-        <span class="text-2xl group-hover:rotate-12 transition-transform duration-300 inline-block">👑</span>
-        <span class="absolute -top-1 -right-1 h-3.5 w-3.5 bg-emerald-500 rounded-full border-2 border-brand-dark animate-ping"></span>
-        <span class="absolute -top-1 -right-1 h-3.5 w-3.5 bg-emerald-500 rounded-full border-2 border-brand-dark"></span>
-      </div>
+    <button id="nawab-toggle-btn" class="group relative h-14 w-14 rounded-full bg-white text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none cursor-pointer border-2 border-brand-accent p-1" aria-label="Open Chatbot Nawab" title="Chat with Nawab AI">
+      <img src="emblem-circle.png" alt="Nawab AI" class="h-full w-full rounded-full object-contain">
+      <span class="absolute -top-1 -right-1 h-3.5 w-3.5 bg-emerald-500 rounded-full border-2 border-brand-dark animate-ping"></span>
+      <span class="absolute -top-1 -right-1 h-3.5 w-3.5 bg-emerald-500 rounded-full border-2 border-brand-dark"></span>
     </button>
 
   </div>
