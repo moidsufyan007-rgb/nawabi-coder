@@ -24,7 +24,7 @@
 - **Frontend**: Semantic HTML5, Tailwind CSS, Vanilla JavaScript (ES6+)
 - **Icons**: Lucide Icons
 - **Animations**: CSS Keyframe Float Animations, IntersectionObserver Scroll Reveals
-- **Backend / Form Processing**: Node.js Serverless Function (`api/contact.js`) & Web3Forms / Resend
+- **Form Processing**: Direct secure Web3Forms API
 - **Chatbot & NLP**: Pure Client-Side Intent Matching Engine + Web Speech API (Text-to-Speech)
 
 ---
@@ -37,10 +37,6 @@ nawabi-coder/
 ├── styles.css         # Glassmorphism, animations & custom scrollbars
 ├── script.js          # Nawab AI engine, form handling & package selectors
 ├── ceo.jpg            # Founder portrait (M.A. MOID SUFIYAN)
-├── api/
-│   └── contact.js     # Serverless email routing endpoint
-├── vercel.json        # Deployment configuration for Vercel
-├── package.json       # Node dependencies
 └── README.md          # Project documentation
 ```
 
